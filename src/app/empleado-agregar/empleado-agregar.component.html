@@ -1,0 +1,25 @@
+<mat-card><h1>Registrar Nuevo Empleado</h1></mat-card>
+<div>
+<mat-card cols="2">
+  <mat-form-field>
+    <input type="text" required minlength="4" forbiddenName="bob" matInput placeholder="Nombre" [(ngModel)]="crearEmpleado.nombre">
+  </mat-form-field>
+  <mat-form-field>
+    <input type="text" matInput placeholder="Apellido" [(ngModel)]="crearEmpleado.apellido">
+  </mat-form-field>
+  <mat-form-field>
+    <input type="number" matInput placeholder="Edad" [(ngModel)]="crearEmpleado.edad">
+  </mat-form-field><br>
+  <mat-form-field>
+    <input type="text" matInput placeholder="Tipo" [(ngModel)]="crearEmpleado.tipo">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Estado" [(ngModel)]="crearEmpleado.activo">
+  </mat-form-field><br><br>
+      
+  <button mat-button (click)="guardarEmpleado()">Guardar</button>
+  
+  </mat-card>
+</div>
+  <!--[(ngModel)]="crearEmpleado.nombre"   =>   introducir y recibir un valor atraves del input y los manda al .ts-->
+  <!-- {{datoempleado.nombre}}   => obtiene un valor del .ts y lo pone en el html -->

@@ -1,0 +1,17 @@
+<mat-card><h1>Lista de Registros</h1></mat-card>
+<div>
+      <app-item-empleado 
+      *ngFor='let empleado of empleados' 
+            [datoempleado]='empleado' 
+            (salidaempleado)='recibirMensajeDelHijo($event)' >
+      </app-item-empleado>
+</div>
+<!-- * obtiene los datos
+
+      
+     *  mandamos un datos [datoempleado]=''
+           @Input()
+
+
+     * recibimos del hijo (salidaempleado)= 'metodo del padre(recibimos un valor)''
+                 @Output()                          -->

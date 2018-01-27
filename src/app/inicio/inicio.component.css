@@ -1,0 +1,14 @@
+mat-card{
+    padding: 15px;
+    margin: 20px;
+}
+h1{
+    position: relative;
+    left:40%;
+    
+}
+img{
+  
+    display:block;
+    margin:auto;
+}

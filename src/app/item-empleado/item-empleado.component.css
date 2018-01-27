@@ -1,0 +1,29 @@
+mat-card{
+    padding: 5px;
+    margin: 2px;
+}
+
+h1{
+    position: relative;
+   
+}
+
+label{
+    margin: 5px;
+    padding: 50px;
+  
+}
+.ver{
+    background: rgb(83, 83, 228);
+    color: white;
+    
+    margin-left: 110px;
+}
+.eliminar{
+    background: rgb(247, 67, 67);
+    color: white;
+}
+.color{
+    color:red; 
+}
+

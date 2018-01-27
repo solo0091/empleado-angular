@@ -1,0 +1,25 @@
+<mat-card><h1>Editar Empleado</h1></mat-card>
+<mat-card cols="2">
+<!-- se inserta los datos atraves del [(ngModel)]="editarEmpleado.nombre"-->
+    <mat-form-field>
+      <input matInput placeholder="Nombre" [(ngModel)]="editarEmpleado.nombre" >
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Apellido" [(ngModel)]="editarEmpleado.apellido">
+      </mat-form-field><br>
+      <mat-form-field>
+        <input matInput placeholder="Edad" [(ngModel)]="editarEmpleado.edad">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Tipo" [(ngModel)]="editarEmpleado.tipo">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Estado" [(ngModel)]="editarEmpleado.activo">
+      </mat-form-field><br><br>
+      
+  <!-- <button mat-button (click)="editarusuario(editarEmpleado)">Guardar Cambios</button> -->
+  <button mat-button (click)="guardarNuevosCambios()">Guardar Cambios</button>
+
+  
+  </mat-card>
+ 
