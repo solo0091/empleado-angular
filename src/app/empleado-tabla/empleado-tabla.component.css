@@ -23,3 +23,12 @@ mat-card{
 .example-container{
   margin: 20px;
 }
+mat-list{
+  padding: 5px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5px;
+  marker-end: 5px;
+  background: white;
+  position: relative;
+}

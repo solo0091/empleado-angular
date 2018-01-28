@@ -1,8 +1,23 @@
 <mat-card><h1>Registrar Nuevo Empleado</h1></mat-card>
 <div>
 <mat-card cols="2">
-  <mat-form-field>
-    <input type="text" required minlength="4" forbiddenName="bob" matInput placeholder="Nombre" [(ngModel)]="crearEmpleado.nombre">
+  <mat-form-field >
+    <input type="text"   matInput placeholder="Nombre" [(ngModel)]="crearEmpleado.nombre" #nombre="ngModel" required minlength="3" maxlength="25"  pattern="[A-Z][a-zA-Z0-9]*"><br>
+         <span *ngIf="!nombre.valid && nombre.touched">
+           <div [hidden]="!nombre.errors.required">
+             Obligatorio
+           </div>
+           <div [hidden]="!nombre.errors.minlength">
+                Minino de 3 caracteres
+           </div>
+           <div [hidden]="!nombre.errors.maxlength">
+              Maximo de 30caracteres
+         </div>
+         <div [hidden]="!nombre.errors.pattern">
+            Debe de empezar con mayuscula
+       </div>
+     </span>
+
   </mat-form-field>
   <mat-form-field>
     <input type="text" matInput placeholder="Apellido" [(ngModel)]="crearEmpleado.apellido">
@@ -11,13 +26,17 @@
     <input type="number" matInput placeholder="Edad" [(ngModel)]="crearEmpleado.edad">
   </mat-form-field><br>
   <mat-form-field>
-    <input type="text" matInput placeholder="Tipo" [(ngModel)]="crearEmpleado.tipo">
+    <input type="text" matInput placeholder="Tipo" [(ngModel)]="crearEmpleado.tipo" ngModel #tipo="ngModel" sin-espacios>
+    <div *ngIf="tipo.errors">
+      El campo no debe de tener espacios
+    </div>
   </mat-form-field>
+  
   <mat-form-field>
     <input matInput placeholder="Estado" [(ngModel)]="crearEmpleado.activo">
   </mat-form-field><br><br>
       
-  <button mat-button (click)="guardarEmpleado()">Guardar</button>
+  <button mat-button (click)="guardarEmpleado()" >Guardar</button>
   
   </mat-card>
 </div>

@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./empleado-agregar.component.css']
 })
 export class EmpleadoAgregarComponent implements OnInit {
-  
+
   crearEmpleado:Empleado={};
    
   constructor( private serviciempleado:EmpleadoService,

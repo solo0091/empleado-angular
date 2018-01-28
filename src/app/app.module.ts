@@ -21,6 +21,8 @@ import { EmpleadoTablaComponent } from './empleado-tabla/empleado-tabla.componen
 import { DetalleEmpleadoComponent } from './detalle-empleado/detalle-empleado.component';
 import { TestDirectivasComponent } from './test-directivas/test-directivas.component';
 import { SergioDirectiveDirective } from './sergio-directive.directive';
+import { sinEspacios }from './validaciones.directive';
+import { ItemListEmpleadoComponent } from './item-list-empleado/item-list-empleado.component';
 
 @NgModule({
   declarations: [
@@ -30,11 +32,13 @@ import { SergioDirectiveDirective } from './sergio-directive.directive';
     EmpleadoAgregarComponent,
     EmpleadoEditarComponent,
     InicioComponent,
+    sinEspacios,
   
     EmpleadoTablaComponent,
     DetalleEmpleadoComponent,
     TestDirectivasComponent,
     SergioDirectiveDirective,
+    ItemListEmpleadoComponent,
    
   ],
   imports: [

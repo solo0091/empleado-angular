@@ -10,8 +10,8 @@ import {MatTableDataSource} from '@angular/material';
 })
 export class EmpleadoTablaComponent implements OnInit {
   @Input()
-  empleados: Empleado[];
-  displayedColumns = ['nombre', 'apellido', 'edad', 'tipo', 'activo'];
+  empleados: Empleado;
+  
  
    constructor(private empleadoservice:EmpleadoService,
                private routervariables:Router) { }
@@ -23,6 +23,11 @@ export class EmpleadoTablaComponent implements OnInit {
     this.empleados=datos.data;
     });
   }
-
+ 
+  recibirIdDelHijo(idRecivido: string){
+    this.routervariables.navigate(['rutaDetalleEmpleado', idRecivido]);//ruta a la qe mandamos el datoRec..
+ 
+     
+  }
 
 }
